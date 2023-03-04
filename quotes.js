@@ -1,19 +1,17 @@
-const quoteContainer = document.querySelector(".quote-container");
+const quoteContainer = document.querySelector("#quote");
 const quoteButton = document.querySelector("#quote-btn");
 let url = "https://type.fit/api/quotes";
 
 quoteButton.addEventListener("click", () => {
-  quoteContainer.innerHTML = getQuote();
+  getQuote().then((quote) => {
+    quoteContainer.innerHTML = quote;
+  });
 });
 
 const getQuote = async function () {
-  fetch(url)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      return console.log(JSON.stringify(data[1].text));
-    });
-};
+  const randomNumber = Math.floor(Math.random() * 1000);
+  const response = await fetch(url);
+  const data = await response.json();
 
-// getQuote();
+  return data[randomNumber].text;
+};
