@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: cornflowerblue;
+    background-color: #173F5F;
 
 }
 
@@ -19,13 +19,14 @@ h1 {
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
-    margin-top: 0
+    margin-top: 0;
+    color: white;
 }
 
 .quote-container {
     padding: 20px;
     border-radius: 20px;
-    background-color: white;
+    background-color: rgba(246, 213, 92, 0.8);
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
@@ -38,10 +39,12 @@ h1 {
 }
 
 /* Style the quote author */
-.quote-container cite {
+#author {
     display: block;
+    text-align: right;
     margin-top: 10px;
     font-style: italic;
+    font-size: 1rem;
 }
 
 /* Style the button */
@@ -49,16 +52,17 @@ h1 {
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #108327;
+    border-radius: 25px;
+    background-color: rgba(237, 85, 59, 0.5);
     color: white;
     font-size: 1.2rem;
     border: none;
     cursor: pointer;
+    width: 100%;
 }
 
 #quote-btn:hover {
-    background-color: #0062cc;
+    background-color: rgba(237, 85, 59, 0.8);
 }
 
 #quote-btn:active {
